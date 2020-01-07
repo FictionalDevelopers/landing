@@ -1,0 +1,14 @@
+name: Build and publish to pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-pages:
+    runs-on: ubuntu-latest
+    name: Build and publish
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dmitry-honcharuk/gh-pages-action@master
